@@ -1,0 +1,21 @@
+@import '../../styles/colors';
+.card-img-top{
+    border-radius: 50%;
+    height: 300px;
+    width: 300px;
+}
+.card{
+    border: none;
+    background-color: transparent;
+    top:50px;
+}
+
+.link-person {
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+}
+.link-person img{
+    height: 25px;
+    width: 25px;
+}

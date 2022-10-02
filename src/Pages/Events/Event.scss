@@ -1,0 +1,77 @@
+@import "../../../styles/_box-shadow.scss";
+@import "../../../styles/_colors.scss";
+
+.event {
+  //box-shadow: $BoxShadow;
+  .event-single-timeRem{
+    background-color: $background;
+    padding: 20px;
+    font-weight: 700;
+
+  }
+  .event-head-1
+  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .event-single-head {
+    font-size: 45px;
+    font-weight: 600;
+    font-family: freestyle;
+    margin-top: 20px;
+  }
+  .event-single-main {
+    display: flex;
+    padding: 30px;
+    padding-top: 10px;
+    img {
+      height: 400px;
+      margin: 30px;
+     // border-radius: 20px;
+    }
+    .event-single-right {
+      padding: 30px;
+      margin: 10px;
+      margin-top: 0px;
+      text-align: left;
+      justify-content: space-around;
+      .but-event {
+        margin-top: 10px;
+      }
+      .event-description{
+        text-align: justify;
+        text-justify: inter-word;
+      }
+    }
+  }
+  h2 {
+    margin-top: 10px;
+  }
+}
+.event-details {
+  font-weight: 700;
+  margin-bottom: 20px;
+  border: 1px solid rgb(52, 52, 52);
+  height: 250px;
+  width: 300px;
+  margin-top: 5px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .register-head{
+    font-size: 25px;
+  }
+  .event-time{
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .event-single-main {
+    display: flex;
+    flex-direction: column;
+  }
+}

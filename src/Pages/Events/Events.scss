@@ -1,0 +1,70 @@
+@import "../../../styles/_box-shadow.scss";
+@import "../../../styles/colors.scss";
+.events-head {
+  font-size: 60px;
+  font-weight: 600;
+  font-family: freestyle;
+}
+.events {
+  padding: 20px;
+  background-color: #a3bcdd;
+  background-color: $background;
+  min-height: 100vh;
+}
+.events-main {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  .event-card {
+    text-align: left;
+    display: flex;
+    max-width: 600px;
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 15px;
+    font-family: "Roboto Slab", serif;
+    box-shadow: $BoxShadow;
+    .event-img {
+      img {
+        width: 250px;
+        border-radius: 15px;
+      }
+    }
+    .event-content {
+      padding: 10px 25px;
+      .event-details {
+        padding-top: 10px;
+        .event-time {
+          span {
+            font-weight: 700;
+          }
+        }
+      }
+      h2 {
+        font-size: 22px;
+        font-weight: 600;
+      }
+    }
+  }
+  .days-left {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    img {
+      height: 20px;
+      margin-right: 15px;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    .event-card {
+      display: grid;
+      grid-template-columns: auto;
+      width: 450px;
+    }
+    .events-head {
+      padding-top: 50px;
+      font-size: 30px;
+    }
+  }
+}

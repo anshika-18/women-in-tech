@@ -1,0 +1,8 @@
+// we are using mobile first responsive approaches
+$tab-media-query-major: "only screen and (min-width : 720px)";
+$desk-media-query-major: "only screen and (min-width : 1024px)";
+// major break point(media query) we can use
+$mob-media-query-minor: "only screen and (min-width: 600px)";
+$tab-media-query-minor: "only screen and (min-width: 800px)";
+$desk-media-query-minor: "only screen and (min-width: 1280px)";
+// minor break point only use when it's impossible to design without these

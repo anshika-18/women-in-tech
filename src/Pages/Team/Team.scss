@@ -1,0 +1,23 @@
+@import '../../../styles/colors';
+.my-3
+{
+    background-attachment: fixed;
+    background-image:linear-gradient($background 50%, #fff 50%);
+}
+.my-3 h1{
+    padding: 20px;
+}
+
+.row-team
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: auto;
+}
+.ech-person
+{
+    width: 350px;
+    justify-content: center;
+    align-items: center;
+}
