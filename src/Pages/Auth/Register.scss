@@ -6,31 +6,17 @@
   font-family: freestyle;
 }
 .register {
-  background: $lightPink;
-  min-height: 90vh;
-  background: url("../../Images/background.png");
-  background-size: cover;
-  justify-content: center;
-  align-items: center;
   display: flex;
-}
-.register-main {
-  min-width: 600px;
-  min-height: 80vh;
-  justify-content: center;
   align-items: center;
-  display: flex;
-  form {
-    justify-content: center;
-    display: grid;
-    grid-template-columns: auto;
-    box-shadow: $BoxShadow;
-    margin-top: 20px;
-    padding: 20px;
-    min-width: 600px;
-    background: rgba(255, 255, 255, 0.6);
-    border-radius: 20px;
-  }
+  justify-content: center;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 119, 204, 1) 0%,
+    rgba(255, 255, 255, 1) 65%
+  );
+
+  align-self: center;
+  height: 90vh;
 }
 
 .register-input {
@@ -38,22 +24,25 @@
   outline: none;
   width: 300px;
   margin: 10px;
-  padding: 15px;
-  border-radius: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid pink;
 }
 .register-button {
-  width: 150px;
+  width: 70%;
+  margin-bottom: 20px;
+  margin-top: 20px;
   justify-self: center;
 }
 
 .register-main1 {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.096);
   box-shadow: $BoxShadow;
   justify-content: center;
   align-self: center;
   align-items: center;
-  max-width: 800px;
-  padding: 30px;
+  width: 100%;
+  padding: 10px;
   border-radius: 20px;
   form {
     justify-content: center;
@@ -61,9 +50,18 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 20px;
-    padding: 20px;
-    min-width: 600px;
+    // margin-top: 20px;
+    // padding: 5px;
+    // min-width: 600px;
     border-radius: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .register {
+    height: fit-content;
+    width: fit-content;
+  }
+  .register-main1 {
+    width: fit-content;
   }
 }
