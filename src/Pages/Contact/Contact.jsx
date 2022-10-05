@@ -14,6 +14,7 @@ export default function Contact() {
     setUserDetails({
       firstName: "",
       lastName: "",
+      email: "",
       college: "",
       message: ""
     })
@@ -47,6 +48,15 @@ export default function Contact() {
                 value={userDetails.lastName}
                 onChange={(e) => {
                   setUserDetails({ ...userDetails, lastName: e.target.value });
+                }}
+              ></input>
+              <input
+                className="contact-input"
+                type="text"
+                placeholder="E-Mail"
+                value={userDetails.email}
+                onChange={(e) => {
+                  setUserDetails({ ...userDetails, email: e.target.value });
                 }}
               ></input>
               <input
