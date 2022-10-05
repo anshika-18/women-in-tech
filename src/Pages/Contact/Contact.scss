@@ -1,3 +1,58 @@
-.contact_container{
-    // margin-top: 100px;
+@import "../../../styles/colors";
+@import "../../../styles/box-shadow";
+.contact_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
+.contact-head {
+    font-size: 60px;
+    font-weight: 600;
+    font-family: freestyle;
+}
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(255, 119, 204, 1) 0%, rgba(255, 255, 255, 1) 65%);
+    align-self: center;
+    height: 90vh;
+}
+
+.contact-input {
+    border: none;
+    outline: none;
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid pink;
+}
+.contact-button {
+    width: 70%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    justify-self: center;
+    max-width: 300px;
+}
+
+.contact-main {
+    background: rgba(255, 255, 255, 0.096);
+    box-shadow: $BoxShadow;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    form {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border-radius: 20px;
+    }
+}
+
