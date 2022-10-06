@@ -1,7 +1,7 @@
 @import "../../../styles/colors";
 @import "../../../styles/box-shadow";
 .register-head {
-  font-size: 60px;
+  font-size: 45px;
   font-weight: 600;
   font-family: freestyle;
 }
@@ -9,12 +9,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 119, 204, 1) 0%,
+  /*background: linear-gradient(
+    50deg,
+    rgba(255, 119, 204, 0.55) 0%,
     rgba(255, 255, 255, 1) 65%
-  );
-
+  );*/
+  background: radial-gradient(circle,rgba(255, 255, 255, 1) ,rgba(255, 119, 204, 1));
   align-self: center;
   height: 90vh;
 }
@@ -36,7 +36,7 @@
 }
 
 .register-main1 {
-  background: rgba(255, 255, 255, 0.096);
+  background: #f2f3f4;
   box-shadow: $BoxShadow;
   justify-content: center;
   align-self: center;
