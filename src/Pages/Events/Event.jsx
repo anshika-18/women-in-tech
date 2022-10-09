@@ -23,7 +23,7 @@ export default function Event() {
       <div className="event-single-timeRem">1 day 2 hour 20 min 3 seconds</div>
       <Container className="pt-5">
         <Row>
-          <Col md={6}>
+          <Col md={5}>
             <div className="event-banner">
               <img
                 src="https://i.ibb.co/fXK1dVD/sarthak-sir-session.png"
@@ -32,7 +32,7 @@ export default function Event() {
               />
             </div>
           </Col>
-          <Col className="right-column" md={6}>
+          <Col className="right-column" md={7}>
             <div className="event-head-1">
               <div className="event-single-head">Web Development</div>
               <div className="event-details">

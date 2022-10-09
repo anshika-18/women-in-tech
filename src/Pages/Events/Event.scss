@@ -3,14 +3,14 @@
 
 .event {
   //box-shadow: $BoxShadow;
-  background: rgb(255, 119, 204);
+ // background: rgb(255, 119, 204);
   background: linear-gradient(
-    90deg,
-    rgba(255, 119, 204, 1) 0%,
+    -90deg,
+    $background 0%,
     rgba(255, 255, 255, 1) 65%
   );
   .event-single-timeRem {
-    background-color: rgb(255, 119, 204);
+    background-color: $background;
     padding: 20px;
     font-weight: 700;
   }
@@ -28,7 +28,7 @@
     padding: 30px;
     padding-top: 10px;
     img {
-      height: 400px;
+      height: 300px;
       margin: 30px;
       // border-radius: 20px;
     }

@@ -14,7 +14,7 @@
     rgba(255, 119, 204, 0.55) 0%,
     rgba(255, 255, 255, 1) 65%
   );*/
-  background: radial-gradient(circle,rgba(255, 255, 255, 1) ,rgba(255, 119, 204, 1));
+  background: radial-gradient(circle,rgba(255, 255, 255, 1) ,$background);
   align-self: center;
   height: 90vh;
 }
@@ -26,7 +26,7 @@
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
-  border: 1px solid pink;
+  border: 1px solid $background;
 }
 .register-button {
   width: 70%;
