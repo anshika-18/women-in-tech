@@ -1,8 +1,7 @@
-@import '../../../styles/colors';
-.my-3
+@import '../../../styles/_colors.scss';
+body
 {
-    background-attachment: fixed;
-    background-image:linear-gradient($background 50%, #fff 50%);
+    background:$background ;
 }
 .my-3 h1{
     padding: 20px;
@@ -14,10 +13,12 @@
     justify-content: center;
     flex-wrap: wrap;
     padding: auto;
+    gap: 20px 0;
 }
 .ech-person
 {
-    width: 350px;
+    width: 500px;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
