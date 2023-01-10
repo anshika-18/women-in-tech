@@ -25,7 +25,17 @@ import Register from "./Pages/Auth/Register";
 import "bootstrap/dist/js/bootstrap.min.js";
 
 import NavbarFun from "./Components/Navbar";
+import axios from "axios";
+
+
 function App() {
+
+
+
+  const loadTeamData=()=>{
+    console.log("hello")
+  }
+
   useEffect(() => {
     AOS.init({
       // Global settings:
@@ -47,7 +57,16 @@ function App() {
       mirror: false, // whether elements should animate out while scrolling past them
       anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
     });
+    axios.get('http/localhost:5001/team/getMembers').then((user)=>{
+      console.log(user)
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+    loadTeamData()
   }, []);
+
+  
   return (
     <div className="App">
       <Router>

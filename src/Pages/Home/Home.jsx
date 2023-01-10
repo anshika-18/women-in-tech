@@ -38,8 +38,8 @@ export default function Home() {
           </Link>
         </div>
       </div>
+      <hr></hr>
       <div className="about">
-        <img src={Wave}></img>
         <div className="about-main">
           <div className="about-main-1">
             <h2>About Us</h2>
@@ -158,14 +158,14 @@ export default function Home() {
           <div className="contact-footer">
             <div className="link-1">Contact Us</div>
             <div className="link-2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio
-              eveniet, fugit non incidunt ad dolorem quaerat
+              Email us at <br></br>
+              witty.help20@gmail.com
             </div>
           </div>
           <div className="link-footer">
             <div className="link-1">Follow Us</div>
             <div className="link-3">
-              <div>ifgiuevw cavuivciovcoewvi jvcifqvewa</div>
+             {/*<div>ifgiuevw cavuivciovcoewvi jvcifqvewa</div> */}
               <br></br>
               <a>
                 <img src={LinkedIn}></img>
