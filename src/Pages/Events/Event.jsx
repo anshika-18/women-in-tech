@@ -3,6 +3,8 @@ import "./Event.scss";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import About from "../../Images/about.png";
 import axios from "axios";
+import { useState,useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 export default function Event() {
   // const registerEvent = async () => {
@@ -18,6 +20,26 @@ export default function Event() {
   //     console.log(err);
   //   }
   // };
+  const event=useParams().topic;
+
+  const [data,setData]=useState([])
+
+  useEffect(()=>{
+    console.log(event)
+    axios.get('https://wit-backend.cyclic.app/event/getEvent/'+event)
+    .then(data=>{
+      if(data.data.length>=1)
+      {
+        console.log(data.data)
+        setData(data.data[0])
+      }
+      
+    })
+    .catch(err=>{
+      console.log(err)
+    })
+   
+  },[])
   return (
     <div className="event">
       <div className="event-single-timeRem">1 day 2 hour 20 min 3 seconds</div>
@@ -34,7 +56,7 @@ export default function Event() {
           </Col>
           <Col className="right-column" md={7}>
             <div className="event-head-1">
-              <div className="event-single-head">Web Development</div>
+              <div className="event-single-head">{data.topic}</div>
               <div className="event-details">
                 <div className="event-time">
                   {/* <div className="register-head">Register Today</div> */}
@@ -50,7 +72,7 @@ export default function Event() {
                   areas. Kindly fill the google form to confirm your presence
                   and receive the link.
                 </div>
-                <div className="event-speaker">Speaker : Sarthak Mittal</div>
+                <div className="event-speaker">Speaker : {data.speaker}</div>
                 <a
                   target="_blank"
                   href="https://docs.google.com/forms/d/1D-SaYu-1rWGx8OD7sB6ow5KjhR_6L0YrN9vN9cenjPs/edit?ts=61eebcb2#response=ACYDBNgH0HnV8RWttMjLcX5X2w4LmqXvuLfXTzvv-xv-i940MS6Y7HfurM9kYNWHpw"

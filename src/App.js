@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import { useEffect } from "react";
 import {
   BrowserRouter as Router,
@@ -23,6 +23,11 @@ import Dashboard from "./Pages/Dashboard/Mentee/Dashboard";
 import Event from "./Pages/Events/Event";
 import Register from "./Pages/Auth/Register";
 import "bootstrap/dist/js/bootstrap.min.js";
+import Logo from "./Images/logo.png";
+import LinkedIn from "./Images/linkedIn.png";
+import Youtube from "./Images/youtube.png";
+import Github from "./Images/github.png";
+import Instagram from "./Images/Instagram.jpg";
 
 import NavbarFun from "./Components/Navbar";
 import axios from "axios";
@@ -57,13 +62,6 @@ function App() {
       mirror: false, // whether elements should animate out while scrolling past them
       anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
     });
-    axios.get('http/localhost:5001/team/getMembers').then((user)=>{
-      console.log(user)
-    })
-    .catch((err)=>{
-      console.log(err)
-    })
-    loadTeamData()
   }, []);
 
   
@@ -81,13 +79,50 @@ function App() {
             <Route path="/contact" element={<Contact />}></Route>
             <Route path="/team" element={<Team />}></Route>
             <Route path="/events" element={<Events />}></Route>
-            <Route path="/events/:id" element={<Event />}></Route>
-            <Route path="/resources" element={<Resources />}></Route>
+            <Route path="/events/:topic" element={<Event />}></Route>
+            { // <Route path="/resources" element={<Resources />}></Route> 
+            }
+
             <Route path="/testimonial" element={<Testimonial />}></Route>
             <Route path="/dashboard" element={<Dashboard />}></Route>
           </Routes>
         </div>
       </Router>
+      <div className="footer">
+
+        <div className="footer-div">
+          <div>
+            <img src={Logo}></img>
+          </div>
+          <div className="contact-footer">
+            <div className="link-1">Contact Us</div>
+            <div className="link-2">
+              Email us at <br></br>
+              witty.help20@gmail.com
+            </div>
+          </div>
+          <div className="link-footer">
+            <div className="link-1">Follow Us</div>
+            <div className="link-3">
+             {/*<div>ifgiuevw cavuivciovcoewvi jvcifqvewa</div> */}
+              <br></br>
+              <a>
+                <img src={LinkedIn}></img>
+              </a>
+              <a>
+                <img src={Instagram}></img>
+              </a>
+              <a>
+                <img src={Youtube}></img>
+              </a>
+              <a>
+                <img src={Github}></img>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="rights">Developed with &#10084; by WIT++</div>
+      </div>
     </div>
   );
 }

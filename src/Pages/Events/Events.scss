@@ -9,7 +9,16 @@
   padding: 20px;
   background-color: #a3bcdd;
   background-color: $background;
+ //background: white;
   min-height: 100vh;
+}
+.loader{
+  width: 100%;
+  display: flex;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 .events-main {
   position: relative;
@@ -23,9 +32,11 @@
     margin: 20px;
     padding: 20px;
     background: #fff;
+    background: $background;
     border-radius: 15px;
     font-family: "Roboto Slab", serif;
     box-shadow: $BoxShadow;
+    background: white;
     .event-img {
       img {
         width: 250px;

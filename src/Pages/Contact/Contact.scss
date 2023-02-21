@@ -17,6 +17,7 @@
     justify-content: center;
     background: linear-gradient(90deg, $background 0%, rgba(255, 255, 255, 1) 65%);
     background: radial-gradient(circle,rgba(255, 255, 255, 1) ,$background);
+    background: #f2f3f4;
     align-self: center;
     height: 90vh;
 }
@@ -42,6 +43,7 @@
 .contact-main {
    // background: rgba(255, 255, 255, 0.096);
     background: #f2f3f4;
+    background: radial-gradient(circle,rgba(255, 255, 255, 1) ,$background);
     box-shadow: $BoxShadow;
     justify-content: center;
     align-self: center;

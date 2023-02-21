@@ -29,60 +29,65 @@ export default function NavbarFun() {
               <Link className="nav-link-my" to="/testimonial">
                 Testimonial
               </Link>
-              <Link className="nav-link-my" to="/resources">
-                Resources
-              </Link>
+              {
+              //<Link className="nav-link-my" to="/resources">
+              //  Resources
+              //</Link> 
+              }
+
               <Link className="nav-link-my" to="/contact">
                 Contact
               </Link>
             </Nav>
-            {localStorage.getItem("token") ? (
-              <Nav>
-                <button
-                  style={{ border: "none", background: "none", padding: "0px" }}
-                  className="button-nav"
-                  onClick={() => {
-                    navigate("/dashboard");
-                  }}
-                >
-                  <img
-                    height="40px"
-                    src="https://openclipart.org/download/247319/abstract-user-flat-3.svg"
-                  ></img>
-                </button>
-                <Button
-                  variant="outline-danger"
-                  className="button-nav"
-                  onClick={() => {
-                    localStorage.removeItem("token");
-                    navigate("/");
-                  }}
-                >
-                  LOGOUT
-                </Button>
-              </Nav>
-            ) : (
-              <Nav>
-                <Button
-                  variant="outline-secondary"
-                  className="button-nav"
-                  onClick={() => {
-                    navigate("/register");
-                  }}
-                >
-                  REGISTER
-                </Button>
-                <Button
-                  variant="outline-secondary"
-                  className="button-nav"
-                  onClick={() => {
-                    navigate("/login");
-                  }}
-                >
-                  LOGIN
-                </Button>
-              </Nav>
-            )}
+            {
+            //{localStorage.getItem("token") ? (
+            //   <Nav>
+            //     <button
+            //       style={{ border: "none", background: "none", padding: "0px" }}
+            //       className="button-nav"
+            //       onClick={() => {
+            //         navigate("/dashboard");
+            //       }}
+            //     >
+            //       <img
+            //         height="40px"
+            //         src="https://openclipart.org/download/247319/abstract-user-flat-3.svg"
+            //       ></img>
+            //     </button>
+            //     <Button
+            //       variant="outline-danger"
+            //       className="button-nav"
+            //       onClick={() => {
+            //         localStorage.removeItem("token");
+            //         navigate("/");
+            //       }}
+            //     >
+            //       LOGOUT
+            //     </Button>
+            //   </Nav>
+            // ) : (
+            //   <Nav>
+            //     <Button
+            //       variant="outline-secondary"
+            //       className="button-nav"
+            //       onClick={() => {
+            //         navigate("/register");
+            //       }}
+            //     >
+            //       REGISTER
+            //     </Button>
+            //     <Button
+            //       variant="outline-secondary"
+            //       className="button-nav"
+            //       onClick={() => {
+            //         navigate("/login");
+            //       }}
+            //     >
+            //       LOGIN
+            //     </Button>
+            //   </Nav>
+            // )}
+            }
           </Navbar.Collapse>
         </Container>
       </Navbar>

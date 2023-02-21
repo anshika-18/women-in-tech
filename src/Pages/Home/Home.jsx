@@ -18,6 +18,7 @@ import Left from "../../Images/left.svg";
 import Right from "../../Images/right.svg";
 import Github from "../../Images/github.png";
 
+
 export default function Home() {
   return (
     <div className="home">
@@ -26,28 +27,29 @@ export default function Home() {
         <div className="out-home">
           <div>WOMEN IN TECH++</div>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus,
-            deleniti excepturi dolorum tempora qui molestiae velit beatae
-            incidunt, quos, odio earum pariatur necessitatibus blanditiis
-            officia adipisci corporis dolor quis explicabo.
+          WIT++ is a non-profit community to aspire young women enthusiasts to grow and learn in a collaborative environment. 
+          The main aim of this community is to help the members to apprehend the opportunities in the field of Computer 
+          Science and technology.
           </p>
-          <Link to="/register">
+          <a href='https://forms.gle/pQSr1RkSRTJ9bZdP7' target="_blank">
             <Button className="but-join" variant="outline-dark">
               Join Us
             </Button>
-          </Link>
+          </a>
         </div>
       </div>
       <hr></hr>
       <div className="about">
         <div className="about-main">
           <div className="about-main-1">
-            <h2>About Us</h2>
+            <div className="home-head">About Us</div>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Laudantium minus nisi temporibus eaque dolorum ipsum magni
-              voluptate quod, inventore dignissimos! Minima amet nulla in est
-              velit placeat fugit exercitationem quae!
+            WIT++ is a non-profit community to aspire young women enthusiasts to grow and learn in a collaborative environment.
+             The main aim of this community is to help the members to apprehend the opportunities in the field of Computer Science 
+             and technology. WIT++ gives the budding women computer engineers, the opportunity to grow in a guided environment 
+             and help them with the right resources to work in the direction of the upliftment of the society by creating tech 
+             solutions and developing impactful products.
+
             </p>
           </div>
           <div>
@@ -56,133 +58,99 @@ export default function Home() {
         </div>
       </div>
       <div className="stats">
-        <div className="stats-head">Numbers Speak louder</div>
+        <div className="home-head">Numbers Speak louder</div>
         <span>
           <div className="stat">
-            <div>200+</div>
+            <div>400+</div>
             <div className="stat-about">community members</div>
           </div>
-
           <div className="stat">
-            <div>200+</div>
-            <div className="stat-about">companies</div>
-          </div>
-          <div className="stat">
-            <div>200+</div>
-            <div className="stat-about">offers and scholarship bagged</div>
-          </div>
-          <div className="stat">
-            <div>22,00,000+</div>
+            <div>40,00,000+</div>
             <div className="stat-about">Average CTC</div>
+          </div>
+          <div className="stat">
+            <div>50+</div>
+            <div className="stat-about">Offers bagged</div>
+          </div>
+          <div className="stat">
+            <div>100+</div>
+            <div className="stat-about">Sessions taken</div>
           </div>
         </span>
       </div>
       <div className="team">
-        <div className="team-head">Meet our team</div>
+        <div className="home-head">Co-founders</div>
         <div className="members">
           <div className="member">
             <div className="member-img">
               <img src={Instagram}></img>
             </div>
             <div className="member-detail">
-              <div className="member-name">Anshika Jain</div>
-              <div className="member-pos">Intern at SAP</div>
+              <div className="member-name">Sejal Gupta</div>
+              <div className="member-pos">Analyst at Goldmam Sachs | Researcher | MLSA | Public speaker</div>
+            </div>
+          </div>
+          <div className="member">
+            <div className="member-img">
+              <img src={Instagram}></img>
+            </div>
+            <div className="member-detail">
+              <div className="member-name">Shivanshi Srivastava</div>
+              <div className="member-pos">MTS-2 at Adobe </div>
+            </div>
+          </div>
+          <div className="member">
+            <div className="member-img">
+              <img src={Instagram}></img>
+            </div>
+            <div className="member-detail">
+              <div className="member-name">Anisha Jindal</div>
+              <div className="member-pos">Analyst at Goldmam Sachs </div>
             </div>
           </div>
         </div>
       </div>
       <hr></hr>
-      <div className="faq">
+      <div className="faq" id="faq">
         <div>
           <img src={Faq}></img>
         </div>
         <div className="faq-main">
-          <h1>FAQ</h1>
-          <Accordion>
+          <div className="home-head">FAQ</div>
+          <Accordion>        
             <Accordion.Item eventKey="0">
-              <Accordion.Header>Accordion Item #1</Accordion.Header>
+              <Accordion.Header>Will you teach the basics of these topics as well?</Accordion.Header>
               <Accordion.Body>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Yes. The prime aim is to strengthen the basics and build the concepts, followed by practice of important interview questions.
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="1">
-              <Accordion.Header>Accordion Item #2</Accordion.Header>
+              <Accordion.Header>Is it free of cost?</Accordion.Header>
               <Accordion.Body>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Yes. But it will cost your enthusiasm and will to learn every day. This initiative is a drive to push more female candidates towards the wonders of DSA and coding. 
+
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="2">
-              <Accordion.Header>Accordion Item #2</Accordion.Header>
+              <Accordion.Header>Will you start from the beginning of DSA? </Accordion.Header>
               <Accordion.Body>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Yes, we will start from the basics. 
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="3">
-              <Accordion.Header>Accordion Item #2</Accordion.Header>
+              <Accordion.Header>Are there any great perks or incentives?</Accordion.Header>
               <Accordion.Body>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              We conduct fortnightly contests. Being a part of this community, you have access to those contests and ppts of the class.
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="5">
+              <Accordion.Header>Is this program linked with some company or some other initiative?</Accordion.Header>
+              <Accordion.Body>
+              No. This is completely independent of any program named WIT. It is not affiliated with any organisation or company.
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
         </div>
-      </div>
-      <div className="footer">
-        <div className="footer-div">
-          <div>
-            <img src={Logo}></img>
-          </div>
-          <div className="contact-footer">
-            <div className="link-1">Contact Us</div>
-            <div className="link-2">
-              Email us at <br></br>
-              witty.help20@gmail.com
-            </div>
-          </div>
-          <div className="link-footer">
-            <div className="link-1">Follow Us</div>
-            <div className="link-3">
-             {/*<div>ifgiuevw cavuivciovcoewvi jvcifqvewa</div> */}
-              <br></br>
-              <a>
-                <img src={LinkedIn}></img>
-              </a>
-              <a>
-                <img src={Instagram}></img>
-              </a>
-              <a>
-                <img src={Youtube}></img>
-              </a>
-              <a>
-                <img src={Github}></img>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div className="rights">@2022 WIT++ All rights reserved</div>
       </div>
     </div>
   );
