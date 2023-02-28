@@ -106,16 +106,13 @@ function App() {
             <div className="link-3">
              {/*<div>ifgiuevw cavuivciovcoewvi jvcifqvewa</div> */}
               <br></br>
-              <a>
+              <a href="https://www.linkedin.com/company/wit-plus-plus/" target="_blank_">
                 <img src={LinkedIn}></img>
               </a>
-              <a>
+              <a href="https://instagram.com/wit_women_in_tech?igshid=YmMyMTA2M2Y=" target="_blank_">
                 <img src={Instagram}></img>
               </a>
-              <a>
-                <img src={Youtube}></img>
-              </a>
-              <a>
+              <a href="https://github.com/wit-women-in-tech" target="_blank_">
                 <img src={Github}></img>
               </a>
             </div>

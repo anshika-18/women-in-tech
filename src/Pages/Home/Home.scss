@@ -1,4 +1,8 @@
 @import "../../../styles/colors.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Roboto+Slab&display=swap');
+@import "../../../styles/font_family";
+@import "../../../styles/fonts";
 
 .home {
   justify-content: center;
@@ -10,10 +14,11 @@
   //font-family: Roboto;
   font-size: 40px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 450;
   line-height: 84px;
   letter-spacing: 0em;
   text-align: center;
+  font-family: $fontHead;
 }
 hr{
   margin: 0;
@@ -25,6 +30,7 @@ hr{
   background-position: left;
   background-repeat: no-repeat;
   align-self: center;
+  font-family: $fontHead;
   img {
     height: 100%;
     width: 100%;
@@ -33,20 +39,25 @@ hr{
     height: 100%;
     justify-content: center;
     margin-top: 40%;
-    margin-left: 30%;
+    margin-left: 35%;
     transform: translate(-20%, -30%);
     div {
-      font-size: 50px;
+      font-size: 55px;
       font-weight: 700;
+      font-family: $fontText;
     }
     p {
-      margin-top: 10%;
+      margin-top: 5%;
       margin-bottom: 5%;
+      font-family: $fontText;
+      font-size: $para;
     }
   }
 }
 .about {
   width: 100%;
+  font-family: $fontText;
+  font-size: $para;
   .about-main {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -81,6 +92,8 @@ hr{
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
+  font-family: $fontText;
+  font-size: $para;
   span {
     display: grid;
     grid-template-columns: 30% 20% 30% 20%;
@@ -107,6 +120,8 @@ hr{
     padding: 30px;
     width: 100%;
     margin: auto;
+    font-family: $fontText;
+  font-size: $para;
     .member {
       width: 400px;
       height: 200px;
@@ -155,16 +170,15 @@ hr{
   padding: 30px;
   width: 100%;
   height: 100%;
+  font-family: $fontText;
+  font-size: $para;
   .faq-main {
     display: block;
     width: 100%;
     height: 100%;
     margin: auto;
-    h1 {
-      color: #2e54d6;
-      font-weight: 700;
-      font-size: 50px;
-    }
+    font-family: $fontText;
+    font-size: $para;
   }
 }
 
@@ -174,6 +188,7 @@ hr{
   .home-v {
     display: grid;
     grid-template-columns: auto;
+
   }
   .stats span {
     grid-template-columns: 1fr 1fr;
@@ -188,11 +203,28 @@ hr{
     display: flex;
     flex-direction: column;
   }
+  hr{
+    display:none;
+  }
 }
 
 @media screen and (max-width: 800px) {
   .footer-div {
     display: flex;
     flex-direction: column;
+  }
+}
+
+.company-images
+{
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+  justify-content: center;
+  img{
+    height: 45px;
+    margin: 15px;
+    width: auto;
   }
 }

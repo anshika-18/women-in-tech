@@ -17,7 +17,22 @@ import Youtube from "../../Images/youtube.png";
 import Left from "../../Images/left.svg";
 import Right from "../../Images/right.svg";
 import Github from "../../Images/github.png";
-
+import google from "../../Images/Company/google.png"
+import sap from "../../Images/Company/sap.png"
+import ms from "../../Images/Company/ms.svg"
+import amazon from "../../Images/Company/amazon.svg"
+import ge from "../../Images/Company/ge.png"
+import gs from "../../Images/Company/gs.png"
+import adobe from "../../Images/Company/adobe.png"
+import byjus from "../../Images/Company/byjus.png"
+import flipkart from "../../Images/Company/flipkart.svg"
+import mw from "../../Images/Company/mw.jpeg"
+import ds from "../../Images/Company/ds.png"
+import navi from "../../Images/Company/navi.png"
+import sf from "../../Images/Company/sf.png"
+import synopsys from "../../Images/Company/synopsys.png"
+import winzo from "../../Images/Company/winzo.png"
+import uc from "../../Images/Company/uc.png"
 
 export default function Home() {
   return (
@@ -25,7 +40,7 @@ export default function Home() {
       <div className="home-v">
         <img src={Vector1}></img>
         <div className="out-home">
-          <div>WOMEN IN TECH++</div>
+          <div>WIT++ <br></br> WOMEN IN TECH</div>
           <p>
           WIT++ is a non-profit community to aspire young women enthusiasts to grow and learn in a collaborative environment. 
           The main aim of this community is to help the members to apprehend the opportunities in the field of Computer 
@@ -39,30 +54,32 @@ export default function Home() {
         </div>
       </div>
       <hr></hr>
-      <div className="about">
-        <div className="about-main">
-          <div className="about-main-1">
-            <div className="home-head">About Us</div>
-            <p>
-            WIT++ is a non-profit community to aspire young women enthusiasts to grow and learn in a collaborative environment.
-             The main aim of this community is to help the members to apprehend the opportunities in the field of Computer Science 
-             and technology. WIT++ gives the budding women computer engineers, the opportunity to grow in a guided environment 
-             and help them with the right resources to work in the direction of the upliftment of the society by creating tech 
-             solutions and developing impactful products.
-
-            </p>
-          </div>
-          <div>
-            <img src={About}></img>
-          </div>
+      <div className="company">
+        <div className="company-images">
+          <img src={google}></img>
+          <img src={sap}></img>
+          <img src={ms}></img>
+          <img src={amazon}></img>
+          <img src={ge}></img>
+          <img src={flipkart}></img>
+          <img src={gs}></img>
+          <img src={winzo}></img>
+          <img src={ds}></img>
+          <img src={uc}></img>
+          <img src={navi}></img>
+          <img src={synopsys}></img>
+          <img src={sf}></img>
+          <img src={adobe}></img>
+          <img src={mw}></img>
+          <img src={byjus}></img>
         </div>
       </div>
       <div className="stats">
-        <div className="home-head">Numbers Speak louder</div>
+        <div className="home-head">Numbers Speak Louder</div>
         <span>
           <div className="stat">
             <div>400+</div>
-            <div className="stat-about">community members</div>
+            <div className="stat-about">Community Members</div>
           </div>
           <div className="stat">
             <div>40,00,000+</div>
@@ -70,16 +87,16 @@ export default function Home() {
           </div>
           <div className="stat">
             <div>50+</div>
-            <div className="stat-about">Offers bagged</div>
+            <div className="stat-about">Offers Bagged</div>
           </div>
           <div className="stat">
             <div>100+</div>
-            <div className="stat-about">Sessions taken</div>
+            <div className="stat-about">Sessions Taken</div>
           </div>
         </span>
       </div>
       <div className="team">
-        <div className="home-head">Co-founders</div>
+        <div className="home-head">Co-Founders</div>
         <div className="members">
           <div className="member">
             <div className="member-img">
