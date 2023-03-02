@@ -12,7 +12,8 @@ export default function Team() {
       behavior: "smooth",
     });
     axios
-      .get("https://wit-backend.cyclic.app/team/getMembers")
+      .get("https://wit-backend.onrender.com/team/getMembers")
+      //.get("https://wit-backend.cyclic.app/team/getMembers")
       .then((data) => {
         console.log(data.data);
         setMembers(data.data);
