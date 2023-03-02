@@ -1,9 +1,11 @@
 @import "../../../styles/_box-shadow.scss";
-@import "../../../styles/_colors.scss";
+@import "../../../styles/colors.scss";
+@import "../../../styles/font_family";
+@import "../../../styles/fonts";
 
 .event {
   //box-shadow: $BoxShadow;
- // background: rgb(255, 119, 204);
+  // background: rgb(255, 119, 204);
   background: linear-gradient(
     -90deg,
     $background 0%,
@@ -13,6 +15,7 @@
     background-color: $background;
     padding: 20px;
     font-weight: 700;
+    font-family: $fontText;
   }
   .right-column {
     align-self: center;
@@ -20,8 +23,11 @@
   .event-single-head {
     text-align: left;
     font-size: 45px;
-    font-weight: 600;
+    font-weight: 450;
     font-family: freestyle;
+    font-family: $fontHead;
+    margin-bottom: 20px;
+    color: $footer;
   }
   .event-single-main {
     display: flex;
@@ -59,15 +65,23 @@
   .event-time {
     padding-bottom: 10px;
     color: rgba(255, 119, 204, 1);
+    color: black;
     font-weight: 600;
+    font-size: 20px;
   }
 }
 .event-description {
   text-align: left;
   padding: 30px;
+  h2 {
+    color: $footer;
+    font-family: $fontHead;
+    margin-bottom: 20px;
+  }
 }
 .event-about-image {
   width: 100%;
+  //padding: 30px;
   img {
     width: 100%;
     height: 100%;
@@ -77,6 +91,7 @@
   padding-top: 20px;
   font-weight: 600;
   padding-bottom: 20px;
+  font-size: 20px;
 }
 .event-banner {
   margin: 20px;

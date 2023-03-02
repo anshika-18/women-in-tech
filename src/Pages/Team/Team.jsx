@@ -1,20 +1,26 @@
 import axios from "axios";
-import React, { Component,useState,useEffect } from "react";
+import React, { Component, useState, useEffect } from "react";
 import UserCard from "../../Components/UserCard";
 import "./Team.scss";
-import { Audio ,ThreeDots} from 'react-loader-spinner';
+import { Audio, ThreeDots } from "react-loader-spinner";
 export default function Team() {
-  const [members,setMembers]=useState([]);
+  const [members, setMembers] = useState([]);
 
-  useEffect(()=>{
-    axios.get('https://wit-backend.cyclic.app/team/getMembers').then((data)=>{
-    console.log(data.data)
-    setMembers(data.data)
-    })
-    .catch((err)=>{
-      console.log(err)
-    })
-  },[])
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    axios
+      .get("https://wit-backend.cyclic.app/team/getMembers")
+      .then((data) => {
+        console.log(data.data);
+        setMembers(data.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
   // constructor() {
   //   super();
   //   // name,imageUrl,githubUrl,linkedInUrl,college,status
@@ -80,36 +86,35 @@ export default function Team() {
   //   });
   // }
 
- 
-    return (
-      <div className="my-team">
-        <h1> Team Members </h1>
-        {
-          members.length!=0?
-          <>
-            <div className="row-team">
-              {members.map((element) => {
-                return (
-                  <div className="ech-person" key={element.id}>
-                    <UserCard userData={element} />
-                  </div>
-                );
-              })}
-            </div>
-          </>:
-          <div className="loader">
-            <ThreeDots 
-            height="50" 
-            width="50" 
+  return (
+    <div className="my-team">
+      <h1> Team Members </h1>
+      {members.length != 0 ? (
+        <>
+          <div className="row-team">
+            {members.map((element) => {
+              return (
+                <div className="ech-person" key={element.id}>
+                  <UserCard userData={element} />
+                </div>
+              );
+            })}
+          </div>
+        </>
+      ) : (
+        <div className="loader">
+          <ThreeDots
+            height="50"
+            width="50"
             radius="5"
-            color="blue" 
+            color="blue"
             ariaLabel="three-dots-loading"
             wrapperStyle={{}}
             wrapperClassName=""
             visible={true}
-            />
-          </div>
-        }
-      </div>
-    );
-  }
+          />
+        </div>
+      )}
+    </div>
+  );
+}

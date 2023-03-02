@@ -3,8 +3,9 @@ import "./Event.scss";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import About from "../../Images/about.png";
 import axios from "axios";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import moment from "moment";
 
 export default function Event() {
   // const registerEvent = async () => {
@@ -20,29 +21,64 @@ export default function Event() {
   //     console.log(err);
   //   }
   // };
-  const event=useParams().topic;
+  const event = useParams().topic;
 
-  const [data,setData]=useState([])
+  const [data, setData] = useState([]);
 
-  useEffect(()=>{
-    console.log(event)
-    axios.get('https://wit-backend.cyclic.app/event/getEvent/'+event)
-    .then(data=>{
-      if(data.data.length>=1)
-      {
-        console.log(data.data)
-        setData(data.data[0])
-      }
-      
-    })
-    .catch(err=>{
-      console.log(err)
-    })
-   
-  },[])
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    console.log(event);
+    axios
+      .get("https://wit-backend.cyclic.app/event/getEvent/" + event)
+      .then((data) => {
+        if (data.data.length >= 1) {
+          console.log(data.data);
+          setData(data.data[0]);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  const [currentDays, changeDays] = useState();
+  const [currentHours, changeHours] = useState();
+  const [currentMinutes, changeMinutes] = useState();
+  const [currentSeconds, changeSeconds] = useState();
+
+  function checkTime() {
+    const difference = moment(data.date).diff(moment(), "second");
+    const days = Math.floor(difference / (60 * 60 * 24));
+    const hours = Math.floor((difference / (60 * 60)) % 24);
+    const minutes = Math.floor((difference / 60) % 60);
+    const seconds = Math.floor(difference % 60);
+    changeSeconds(seconds);
+    changeMinutes(minutes);
+    changeHours(hours);
+    changeDays(days);
+    console.log("hi");
+  }
+
+  setInterval(checkTime, 1000);
+
   return (
     <div className="event">
-      <div className="event-single-timeRem">1 day 2 hour 20 min 3 seconds</div>
+      <div className="event-single-timeRem">
+        {moment().diff(moment(data.date), "seconds") > 0 ? (
+          <>EVENT COMPLETED</>
+        ) : (
+          <>
+            {currentDays} days {currentHours} hours {currentMinutes} minutes{" "}
+            {currentSeconds} seconds
+          </>
+        )}
+      </div>
+
+      <br></br>
+      {}
       <Container className="pt-5">
         <Row>
           <Col md={5}>
@@ -61,34 +97,51 @@ export default function Event() {
                 <div className="event-time">
                   {/* <div className="register-head">Register Today</div> */}
                   <div>
-                    <span>DATE: </span>20 FEB 2022
+                    <span>DATE: </span>
+                    {moment(data.date).format("DD/MM/YYYY")}
                   </div>
                   <div>
-                    <span>TIME: </span>5:00PM onwards
+                    <span>TIME: </span> {moment(data.date).format("LT")}
                   </div>
                 </div>
                 <div>
-                  Calling on students interested in web development and related
+                  Calling on students interested in {data.topic} and related
                   areas. Kindly fill the google form to confirm your presence
                   and receive the link.
                 </div>
                 <div className="event-speaker">Speaker : {data.speaker}</div>
-                <a
-                  target="_blank"
-                  href="https://docs.google.com/forms/d/1D-SaYu-1rWGx8OD7sB6ow5KjhR_6L0YrN9vN9cenjPs/edit?ts=61eebcb2#response=ACYDBNgH0HnV8RWttMjLcX5X2w4LmqXvuLfXTzvv-xv-i940MS6Y7HfurM9kYNWHpw"
-                >
-                  <Button className="mt-2 w-100" variant="outline-secondary">
-                    Register
-                  </Button>
-                </a>
+                {moment().diff(moment(data.date), "seconds") > 0 ? (
+                  <>
+                    <Button className="mt-2 w-100" variant="secondary" disabled>
+                      Registration Closed
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <a
+                      target="_blank"
+                      href="https://docs.google.com/forms/d/1D-SaYu-1rWGx8OD7sB6ow5KjhR_6L0YrN9vN9cenjPs/edit?ts=61eebcb2#response=ACYDBNgH0HnV8RWttMjLcX5X2w4LmqXvuLfXTzvv-xv-i940MS6Y7HfurM9kYNWHpw">
+                      <Button
+                        className="mt-2 w-100"
+                        variant="outline-secondary">
+                        Register
+                      </Button>
+                    </a>
+                  </>
+                )}
               </div>
             </div>
           </Col>
         </Row>
-        <Row style={{ alignItems: "center" }}>
-          <Col md={8}>
+        <Row
+          style={{
+            alignItems: "center",
+            padding: "30px",
+            paddingBottom: "60px",
+          }}>
+          <Col md={12}>
             <div className="event-description">
-              <h2>About</h2>
+              <h2>Description </h2>
               Hi everyone!! WIT++ is glad to announce a session on web
               development. An incoming SDE at Amazon, Sarthak Mittal, pursuing
               his graduation from NIT Kurukshetra in Information technology will
@@ -103,11 +156,6 @@ export default function Event() {
               this far. Kindly fill the google form to confirm your presence and
               receive the link. You may add questions you want the speaker to
               address. <br></br>P.S.- This session is open to all.
-            </div>
-          </Col>
-          <Col md={4}>
-            <div className="event-about-image">
-              <img src={About}></img>
             </div>
           </Col>
         </Row>

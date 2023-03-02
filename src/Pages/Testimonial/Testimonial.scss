@@ -2,75 +2,75 @@
 @import "../../../styles/_colors.scss";
 
 .testimonials {
-    background: $background;
+  background: $background;
 }
 .testimonials-head {
-  padding-top: 100px;
+  padding-top: 20px;
   font-size: 50px;
   font-weight: 600;
   font-family: freestyle;
 }
 .testimonials-main {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;    // don't know why
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; // don't know why
 }
 .testimonials-card {
-    width: 1100px; 
-    margin: 20px;
-    padding: 40px 80px;
-    background: #fff;
-    border-radius: 15px;
-    display: flex;
-    font-family: "Roboto Slab", serif;
-    box-shadow: $BoxShadow;
+  width: 1100px;
+  margin: 20px;
+  padding: 40px 80px;
+  background: #fff;
+  border-radius: 15px;
+  display: flex;
+  font-family: "Roboto Slab", serif;
+  box-shadow: $BoxShadow;
 
-    .user-image {
-        img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-        }
+  .user-image {
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
     }
+  }
 }
 
 .testimonials-card:nth-child(2n) {
-    text-align: right;
-    flex-direction: row-reverse;
+  text-align: right;
+  flex-direction: row-reverse;
 
-    .user-image {
-        margin-left: 50px;
-    }
+  .user-image {
+    margin-left: 50px;
+  }
 }
-.testimonials-card:nth-child(2n+1) {
-    text-align: left;
+.testimonials-card:nth-child(2n + 1) {
+  text-align: left;
 
-    .user-image {
-        margin-right: 50px;
-    }
+  .user-image {
+    margin-right: 50px;
+  }
 }
 @media (max-width: 600px) {
+  .testimonials-head {
+    padding-top: 50px;
+    font-size: 30px;
+  }
+  .testimonials-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-content: center;
 
-    .testimonials-head {
-        padding-top: 50px;
-        font-size: 30px;
+    .user-image {
+      margin: 0px;
     }
-    .testimonials-card {
-        display: grid;
-        grid-template-columns: 1fr;
-        text-align: center;
-        justify-content: center;
+  }
 
-        .user-image {
-            margin: 0px;
-        }
+  .testimonials-card:nth-child(2n),
+  .testimonials-card:nth-child(2n + 1) {
+    text-align: center;
+    .user-image {
+      margin: 0px;
+      margin-bottom: 20px;
     }
-
-    .testimonials-card:nth-child(2n), .testimonials-card:nth-child(2n+1) {
-        text-align: center;
-        .user-image {
-            margin: 0px;
-            margin-bottom: 20px;
-        }
-    }
+  }
 }

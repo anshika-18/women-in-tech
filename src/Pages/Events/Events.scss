@@ -1,18 +1,35 @@
 @import "../../../styles/_box-shadow.scss";
 @import "../../../styles/colors.scss";
+@import "../../../styles/font_family";
+@import "../../../styles/fonts";
 .events-head {
   font-size: 60px;
   font-weight: 600;
   font-family: freestyle;
 }
 .events {
-  padding: 20px;
-  background-color: #a3bcdd;
+  padding: 30px;
   background-color: $background;
- //background: white;
   min-height: 100vh;
 }
-.loader{
+#navbar-example2 {
+  border-bottom: 1px solid $footer;
+  .nav-pills {
+    //background: $footer;
+    // margin: 10px;
+    color: white;
+    .nav-item {
+      color: #fff;
+
+      .nav-link {
+        color: $footer;
+        font-weight: 600;
+      }
+    }
+  }
+  color: #fff;
+}
+.loader {
   width: 100%;
   display: flex;
   position: relative;
@@ -20,18 +37,35 @@
   justify-content: space-around;
   flex-wrap: wrap;
 }
+.events-head {
+  color: $footer;
+  font-family: $fontHead;
+  font-weight: 450;
+}
 .events-main {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  margin: 10px;
+  div {
+    .active {
+      color: $footer;
+      font-size: 30px;
+      padding: 20px;
+
+      font-family: $fontText;
+    }
+    .type {
+      display: flex;
+      flex-wrap: wrap;
+      //position: relative;
+      justify-content: space-around;
+    }
+  }
+
   .event-card {
     text-align: left;
     display: flex;
     max-width: 600px;
     margin: 20px;
     padding: 20px;
-    background: #fff;
     background: $background;
     border-radius: 15px;
     font-family: "Roboto Slab", serif;
@@ -48,6 +82,7 @@
       .event-details {
         padding-top: 10px;
         .event-time {
+          color: $footer;
           span {
             font-weight: 700;
           }
@@ -66,6 +101,9 @@
       height: 20px;
       margin-right: 15px;
     }
+    Button {
+      margin: 4px;
+    }
   }
   @media only screen and (max-width: 600px) {
     .event-card {
@@ -78,4 +116,9 @@
       font-size: 30px;
     }
   }
+}
+
+.btn {
+  background: $footer;
+  color: #fff;
 }

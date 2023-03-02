@@ -1,6 +1,6 @@
 @import "../../../styles/colors.scss";
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Roboto+Slab&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Allerta+Stencil&family=Roboto+Slab&display=swap");
 @import "../../../styles/font_family";
 @import "../../../styles/fonts";
 
@@ -8,9 +8,8 @@
   justify-content: center;
 }
 
-.home-head
-{
-  color: #2e54d6;
+.home-head {
+  color: $footer;
   //font-family: Roboto;
   font-size: 40px;
   font-style: normal;
@@ -20,7 +19,7 @@
   text-align: center;
   font-family: $fontHead;
 }
-hr{
+hr {
   margin: 0;
 }
 .home-v {
@@ -113,7 +112,6 @@ hr{
 }
 
 .team {
-  
   .members {
     display: flex;
     flex-wrap: wrap;
@@ -121,7 +119,7 @@ hr{
     width: 100%;
     margin: auto;
     font-family: $fontText;
-  font-size: $para;
+    font-size: $para;
     .member {
       width: 400px;
       height: 200px;
@@ -141,7 +139,6 @@ hr{
         height: 100%;
         img {
           width: 100%;
-  
         }
       }
       .member-detail {
@@ -182,13 +179,10 @@ hr{
   }
 }
 
-
-
 @media screen and (max-width: 500px) {
   .home-v {
     display: grid;
     grid-template-columns: auto;
-
   }
   .stats span {
     grid-template-columns: 1fr 1fr;
@@ -203,8 +197,8 @@ hr{
     display: flex;
     flex-direction: column;
   }
-  hr{
-    display:none;
+  hr {
+    display: none;
   }
 }
 
@@ -215,14 +209,13 @@ hr{
   }
 }
 
-.company-images
-{
+.company-images {
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
   padding: 15px;
   justify-content: center;
-  img{
+  img {
     height: 45px;
     margin: 15px;
     width: auto;

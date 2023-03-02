@@ -32,14 +32,10 @@ import Instagram from "./Images/Instagram.jpg";
 import NavbarFun from "./Components/Navbar";
 import axios from "axios";
 
-
 function App() {
-
-
-
-  const loadTeamData=()=>{
-    console.log("hello")
-  }
+  const loadTeamData = () => {
+    console.log("hello");
+  };
 
   useEffect(() => {
     AOS.init({
@@ -62,9 +58,13 @@ function App() {
       mirror: false, // whether elements should animate out while scrolling past them
       anchorPlacement: "top-bottom", // defines which position of the element regarding to window should trigger the animation
     });
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
 
-  
   return (
     <div className="App">
       <Router>
@@ -80,7 +80,8 @@ function App() {
             <Route path="/team" element={<Team />}></Route>
             <Route path="/events" element={<Events />}></Route>
             <Route path="/events/:topic" element={<Event />}></Route>
-            { // <Route path="/resources" element={<Resources />}></Route> 
+            {
+              // <Route path="/resources" element={<Resources />}></Route>
             }
 
             <Route path="/testimonial" element={<Testimonial />}></Route>
@@ -89,7 +90,6 @@ function App() {
         </div>
       </Router>
       <div className="footer">
-
         <div className="footer-div">
           <div>
             <img src={Logo}></img>
@@ -104,12 +104,16 @@ function App() {
           <div className="link-footer">
             <div className="link-1">Follow Us</div>
             <div className="link-3">
-             {/*<div>ifgiuevw cavuivciovcoewvi jvcifqvewa</div> */}
+              {/*<div>ifgiuevw cavuivciovcoewvi jvcifqvewa</div> */}
               <br></br>
-              <a href="https://www.linkedin.com/company/wit-plus-plus/" target="_blank_">
+              <a
+                href="https://www.linkedin.com/company/wit-plus-plus/"
+                target="_blank_">
                 <img src={LinkedIn}></img>
               </a>
-              <a href="https://instagram.com/wit_women_in_tech?igshid=YmMyMTA2M2Y=" target="_blank_">
+              <a
+                href="https://instagram.com/wit_women_in_tech?igshid=YmMyMTA2M2Y="
+                target="_blank_">
                 <img src={Instagram}></img>
               </a>
               <a href="https://github.com/wit-women-in-tech" target="_blank_">
