@@ -19,8 +19,8 @@ export default function Events() {
       behavior: "smooth",
     });
     axios
-      //.get("https://wit-backend.cyclic.app/event/getEvents")
-      .get("http://localhost:5001/event/getEvents")
+      .get("https://wit-backend.cyclic.app/event/getEvents")
+      //.get("http://localhost:5001/event/getEvents")
       .then((data) => {
         console.log(data.data);
         setData(data.data.active);
