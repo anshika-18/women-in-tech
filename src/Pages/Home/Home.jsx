@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import Background from "../../Images/background.png";
 import HomeV from "../../Images/home-v.svg";
 import Vector1 from "../../Images/vector1.svg";
-import Wave from "../../Images/wave.png";
 import About from "../../Images/about.png";
 import Faq from "../../Images/faq.png";
 import Footer from "../../Images/footer.svg";
