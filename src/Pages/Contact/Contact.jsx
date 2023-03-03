@@ -1,28 +1,51 @@
 import React, { useEffect, useState } from "react";
 import "./Contact.scss";
-import { Button, Col, Row, Container } from "react-bootstrap";
+import { Button, Col, Row, Container, Alert } from "react-bootstrap";
+import axios from "axios";
 
 export default function Contact() {
   const [userDetails, setUserDetails] = useState({
     firstName: "",
     lastName: "",
-    college: "",
-    message: "",
+    description: "",
+    emailId: "",
   });
+  const [error, setError] = useState(false);
+  const [errValue, setErrorValue] = useState();
+  const [variant, setVarient] = useState("danger");
   const clear = () => {
     setUserDetails({
       firstName: "",
       lastName: "",
-      email: "",
-      college: "",
-      message: "",
+      emailId: "",
+      description: "",
     });
+    setErrorValue("Your Message has been recorded !!");
+    setVarient("success");
   };
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(userDetails);
-    localStorage.setItem("User Details", JSON.stringify(userDetails));
-    clear();
+    //localStorage.setItem("User Details", JSON.stringify(userDetails));
+    if (
+      (userDetails.firstName == "" || userDetails.lastName == "",
+      userDetails.description == "" || userDetails.emailId == "")
+    ) {
+      setErrorValue("Please enter all details");
+      setError(true);
+    } else {
+      axios
+        .post("https://wit-backend.onrender.com/query/addQuery", userDetails)
+        .then((data) => {
+          console.log(data);
+          if (data.status == 200) {
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      clear();
+    }
   };
   useEffect(() => {
     window.scrollTo({
@@ -64,27 +87,30 @@ export default function Contact() {
                   className="contact-input"
                   type="text"
                   placeholder="E-Mail"
-                  value={userDetails.email}
+                  value={userDetails.emailId}
                   onChange={(e) => {
-                    setUserDetails({ ...userDetails, email: e.target.value });
+                    setUserDetails({ ...userDetails, emailId: e.target.value });
                   }}></input>
-                <input
-                  className="contact-input"
-                  type="text"
-                  placeholder="College"
-                  value={userDetails.college}
-                  onChange={(e) => {
-                    setUserDetails({ ...userDetails, college: e.target.value });
-                  }}></input>
+
                 <textarea
                   rows="7"
                   className="contact-input"
                   type="text"
                   placeholder="Message"
-                  value={userDetails.message}
+                  value={userDetails.description}
                   onChange={(e) => {
-                    setUserDetails({ ...userDetails, message: e.target.value });
+                    setUserDetails({
+                      ...userDetails,
+                      description: e.target.value,
+                    });
                   }}></textarea>
+                {error ? (
+                  <Alert key={variant} variant={variant}>
+                    * {errValue}
+                  </Alert>
+                ) : (
+                  <></>
+                )}
                 <Button
                   variant="secondary"
                   className="contact-button"

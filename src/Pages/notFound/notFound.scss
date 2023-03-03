@@ -1,0 +1,26 @@
+@import "../../../styles/box-shadow";
+@import "../../../styles/colors";
+@import "../../../styles/font_family";
+@import "../../../styles/fonts";
+.not-head {
+  color: $footer;
+  font-size: 50px;
+  font-weight: 500;
+  font-family: $fontHead;
+  margin: 30px;
+  margin-top: 100px;
+  div {
+    margin-top: 20px;
+  }
+}
+
+.not-main {
+  margin: 30px;
+}
+
+.fourzerofour {
+  color: black;
+  font-size: 15vw;
+  font-weight: 800;
+  font-family: $fontHead;
+}

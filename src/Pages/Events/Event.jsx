@@ -122,11 +122,7 @@ export default function Event() {
                     <a
                       target="_blank"
                       href="https://docs.google.com/forms/d/1D-SaYu-1rWGx8OD7sB6ow5KjhR_6L0YrN9vN9cenjPs/edit?ts=61eebcb2#response=ACYDBNgH0HnV8RWttMjLcX5X2w4LmqXvuLfXTzvv-xv-i940MS6Y7HfurM9kYNWHpw">
-                      <Button
-                        className="mt-2 w-100"
-                        variant="outline-secondary">
-                        Register
-                      </Button>
+                      <Button className="mt-2 w-100">Register</Button>
                     </a>
                   </>
                 )}

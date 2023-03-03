@@ -108,7 +108,7 @@ export default function Team() {
             height="50"
             width="50"
             radius="5"
-            color="blue"
+            color="#7f4ca5"
             ariaLabel="three-dots-loading"
             wrapperStyle={{}}
             wrapperClassName=""

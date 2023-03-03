@@ -13,7 +13,7 @@ export default class UserCard extends Component {
         <img
           className="card-img-top"
           src={userData.imageUrl}
-          alt="Card image cap"
+          alt="member image"
         />
         <div className="card-body">
           <h5 className="card-title"> {userData.name} </h5>

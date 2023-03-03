@@ -28,6 +28,7 @@ import LinkedIn from "./Images/linkedIn.png";
 import Youtube from "./Images/youtube.png";
 import Github from "./Images/github.png";
 import Instagram from "./Images/Instagram.jpg";
+import NotFound from "./Pages/notFound/NotFound";
 
 import NavbarFun from "./Components/Navbar";
 import axios from "axios";
@@ -85,7 +86,10 @@ function App() {
             }
 
             <Route path="/testimonial" element={<Testimonial />}></Route>
-            <Route path="/dashboard" element={<Dashboard />}></Route>
+            {
+              // <Route path="/dashboard" element={<Dashboard />}></Route>
+            }
+            <Route path="*" element={<NotFound />}></Route>
           </Routes>
         </div>
       </Router>
