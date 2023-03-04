@@ -95,7 +95,7 @@ function App() {
       </Router>
       <div className="footer">
         <div className="footer-div">
-          <div>
+          <div className="logo-foot">
             <img src={Logo1}></img>
           </div>
           <div className="contact-footer">

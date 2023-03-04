@@ -42,12 +42,12 @@ export default function Events() {
       <div id="navbar-example2" className="navbar ">
         <ul className="nav nav-pills">
           <li className="nav-item">
-            <a className="nav-link" href="#item-1">
+            <a className="nav-link" href="#active">
               Active
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#item-2">
+            <a className="nav-link" href="#archive">
               Archived
             </a>
           </li>
@@ -56,7 +56,7 @@ export default function Events() {
       {active.length != 0 ? (
         <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
           <div className="events-main">
-            <div id="item-1">
+            <div id="active">
               <div className="active">Active Events</div>
               <div className="type">
                 {active.map((curr) => {
@@ -119,7 +119,7 @@ export default function Events() {
                 })}
               </div>
             </div>
-            <div id="item-2">
+            <div id="archive">
               <div className="active">Archive Events</div>
               <div className="type">
                 {archive.map((curr) => {

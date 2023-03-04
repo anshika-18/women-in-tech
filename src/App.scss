@@ -117,3 +117,24 @@
   background: #c9aed4;
   background: $footer;
 }
+
+@media screen and (max-width: 800px) {
+  .footer {
+    .footer-div {
+      .logo-foot {
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+  .link-footer {
+    margin: 0;
+    padding: 0;
+  }
+  .link-3 {
+    a {
+      margin-top: 0;
+    }
+  }
+}

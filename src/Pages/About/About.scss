@@ -1,0 +1,38 @@
+.logo {
+  height: 100px;
+}
+.about {
+  text-align: left;
+  font-family: "Noto Sans Devanagari";
+}
+
+.about-head {
+  text-align: left;
+  font-family: "Mitr", sans-serif;
+  font-size: 40px;
+}
+ul {
+  text-align: left;
+  padding: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .about {
+    margin: 0;
+    padding: 0;
+    .about-main {
+      transform: none;
+      .about-main-1 {
+        margin: 0;
+        transform: none;
+      }
+    }
+  }
+
+  .about-head {
+    font-size: 30px;
+  }
+  .about-main-1 {
+    margin: 0;
+  }
+}

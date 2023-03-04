@@ -122,3 +122,18 @@
   background: $footer;
   color: #fff;
 }
+
+@media screen and (max-width: 500px) {
+  .events-main {
+    margin: 0;
+    .event-card {
+      margin: 10px;
+      width: 100vw;
+      .event-img {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

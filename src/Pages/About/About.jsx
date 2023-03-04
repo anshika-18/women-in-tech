@@ -1,5 +1,5 @@
 import React from "react";
-import "./About.css";
+import "./About.scss";
 import about from "../../Images/about.png";
 import { useEffect } from "react";
 

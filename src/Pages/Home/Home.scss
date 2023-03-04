@@ -204,7 +204,7 @@ hr {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   .footer-div {
     display: flex;
     flex-direction: column;
@@ -221,5 +221,65 @@ hr {
     height: 45px;
     margin: 15px;
     width: auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .home-head {
+    line-height: 50px;
+  }
+  .home-v {
+    .out-home {
+      margin: 25px;
+      display: block;
+      flex-wrap: wrap;
+      justify-content: center;
+      transform: none;
+      div {
+        font-size: 35px;
+      }
+    }
+  }
+  .home-head {
+    font-size: 35px;
+    padding: 10px;
+  }
+
+  .company-images {
+    img {
+      height: 25px;
+    }
+  }
+  .stats {
+    padding: 10px;
+    .home-head {
+      margin: 0;
+      padding: 0;
+    }
+    span {
+      .stat {
+        div {
+          font-size: 20px;
+        }
+        .stat-about {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  .team {
+    .members {
+      padding: 10px;
+      .member {
+        margin: 10px;
+        width: 100%;
+        .member-detail {
+          padding: 10px;
+          .member-pos {
+            font-size: 15px;
+          }
+        }
+      }
+    }
   }
 }
