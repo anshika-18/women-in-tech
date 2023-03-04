@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.scss";
-import about from "../../Images/about.png";
+import about from "../../Images/about-new.png";
 import { useEffect } from "react";
 
 export default function About() {
