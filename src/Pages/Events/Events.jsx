@@ -64,7 +64,7 @@ export default function Events() {
                     <div className="event-card">
                       <div className="event-img">
                         <img
-                          src="https://i.ibb.co/fXK1dVD/sarthak-sir-session.png"
+                          src={curr.posterUrl}
                           alt="sarthak-sir-session"
                           border="0"
                         />

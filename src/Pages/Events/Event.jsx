@@ -84,11 +84,7 @@ export default function Event() {
         <Row>
           <Col md={5}>
             <div className="event-banner">
-              <img
-                src="https://i.ibb.co/fXK1dVD/sarthak-sir-session.png"
-                alt="sarthak-sir-session"
-                border="0"
-              />
+              <img src={data.posterUrl} alt="sarthak-sir-session" border="0" />
             </div>
           </Col>
           <Col className="right-column" md={7}>
@@ -119,9 +115,7 @@ export default function Event() {
                   </>
                 ) : (
                   <>
-                    <a
-                      target="_blank"
-                      href="https://docs.google.com/forms/d/1D-SaYu-1rWGx8OD7sB6ow5KjhR_6L0YrN9vN9cenjPs/edit?ts=61eebcb2#response=ACYDBNgH0HnV8RWttMjLcX5X2w4LmqXvuLfXTzvv-xv-i940MS6Y7HfurM9kYNWHpw">
+                    <a target="_blank" href={data.registerUrl}>
                       <Button className="mt-2 w-100">Register</Button>
                     </a>
                   </>
@@ -139,20 +133,7 @@ export default function Event() {
           <Col md={12}>
             <div className="event-description">
               <h2>Description </h2>
-              Hi everyone!! WIT++ is glad to announce a session on web
-              development. An incoming SDE at Amazon, Sarthak Mittal, pursuing
-              his graduation from NIT Kurukshetra in Information technology will
-              enlighten us on how to start with Web development. We will be
-              giving you insight about how to kickstart your journey in
-              development. Do you fear participating in a hackathon and have a
-              lot of confusion on the same. Worry not, Sarthak Mittal has
-              participated in various hackathons and been a finalist of SIH '20
-              and he will be there to guide you on what it takes to present
-              yourself in a hackathon. WITTY Talks is exclusively for the
-              College students. We know you have come this far not just to come
-              this far. Kindly fill the google form to confirm your presence and
-              receive the link. You may add questions you want the speaker to
-              address. <br></br>P.S.- This session is open to all.
+              {data.description}
             </div>
           </Col>
         </Row>

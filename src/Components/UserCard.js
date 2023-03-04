@@ -19,10 +19,10 @@ export default class UserCard extends Component {
           <h5 className="card-title"> {userData.name} </h5>
           <p className="card-text"> {userData.status} </p>
           <div>
-            <a href={userData.linkedInUrl} className="link-person">
+            <a href={userData.instagramUrl} className="link-person">
               <img src={Instagram}></img>
             </a>
-            <a href={userData.linkedInUrl} className="link-person">
+            <a href={userData.githubUrl} className="link-person">
               <img src={Github}></img>
             </a>
             <a href={userData.linkedInUrl} className="link-person">
