@@ -34,7 +34,11 @@ export default function Contact() {
       setErrorValue("Please enter all details");
       setError(true);
     } else {
+      setErrorValue("Your Message has been recorded !!");
+      setVarient("success");
+      setError(true);
       axios
+
         .post("https://witbackend.vercel.app/query/addQuery", userDetails)
         .then((data) => {
           console.log(data);
