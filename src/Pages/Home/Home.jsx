@@ -110,7 +110,7 @@ export default function Home() {
         <div className="members">
           <div className="member">
             <div className="member-img">
-              <img src={Instagram}></img>
+              <img src="https://i.ibb.co/n72cqCF/IMG-20191109-075146.jpg"></img>
             </div>
             <div className="member-detail">
               <div className="member-name">Sejal Gupta</div>
@@ -121,7 +121,7 @@ export default function Home() {
           </div>
           <div className="member">
             <div className="member-img">
-              <img src={Instagram}></img>
+              <img src="https://i.ibb.co/FX6qPSG/IMG-20230216-WA0005-01-01.jpg"></img>
             </div>
             <div className="member-detail">
               <div className="member-name">Shivanshi Srivastava</div>
@@ -130,7 +130,7 @@ export default function Home() {
           </div>
           <div className="member">
             <div className="member-img">
-              <img src={Instagram}></img>
+              <img src="https://i.ibb.co/5WT4SH1/IMG-20230302-230213.jpg"></img>
             </div>
             <div className="member-detail">
               <div className="member-name">Anisha Jindal</div>

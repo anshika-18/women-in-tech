@@ -11,13 +11,15 @@
 .home-head {
   color: $footer;
   //font-family: Roboto;
-  font-size: 40px;
+  font-size: 60px;
   font-style: normal;
   font-weight: 450;
   line-height: 84px;
   letter-spacing: 0em;
   text-align: center;
   font-family: $fontHead;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 hr {
   margin: 0;
@@ -122,11 +124,11 @@ hr {
     font-size: $para;
     .member {
       width: 400px;
-      height: 200px;
+      height: 180px;
       display: grid;
       margin: auto;
       grid-template-columns: 40% 60%;
-      padding: 20px;
+      padding: 15px;
       background: linear-gradient(
         267.15deg,
         rgba(254, 53, 186, 0.13) 0.8%,
@@ -135,10 +137,10 @@ hr {
       background: rgb(243, 243, 243);
       border-radius: 20px;
       .member-img {
-        width: 100%;
-        height: 100%;
         img {
-          width: 100%;
+          width: 150px;
+          height: 150px;
+          border-radius: 50%;
         }
       }
       .member-detail {

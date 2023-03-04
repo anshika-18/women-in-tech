@@ -63,7 +63,7 @@ export default function Contact() {
         <Row className="contact">
           <Col md={7}>
             <div className="contact-main">
-              <h1 className="contact-head">Get in Touch</h1>
+              <h1 className="contact-head home-head">Get in Touch</h1>
               <form onSubmit={handleSubmit}>
                 <input
                   className="contact-input"

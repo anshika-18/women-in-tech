@@ -25,7 +25,7 @@ export default function Testimonial() {
   }, []);
   return (
     <div class="testimonials">
-      <div class="testimonials-head">WHAT OUR MENTEES SAY</div>
+      <div class="testimonials-head home-head">What Our Mentees Say</div>
 
       <div class="testimonials-main">
         {data.length != 0 ? (

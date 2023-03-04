@@ -89,7 +89,7 @@ export default function Team() {
 
   return (
     <div className="my-team">
-      <h1> Team Members </h1>
+      <div className="home-head team-head"> Team Members </div>
       {members.length != 0 ? (
         <>
           <div className="row-team">

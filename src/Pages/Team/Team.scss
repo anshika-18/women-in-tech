@@ -1,26 +1,23 @@
-@import '../../../styles/_colors.scss';
-.my-team
-{
-   background:$background ;
-   margin-bottom: 0;
-   min-height: 100vh;
+@import "../../../styles/_colors.scss";
+.my-team {
+  background: $background;
+  margin-bottom: 0;
+  min-height: 100vh;
 }
-.my-team h1{
-    padding: 20px;
+.my-team h1 {
+  padding: 20px;
 }
 
-.row-team
-{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: auto;
-    gap: 20px 0;
+.row-team {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: auto;
+  gap: 20px 0;
 }
-.ech-person
-{
-    width: 350px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.ech-person {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
