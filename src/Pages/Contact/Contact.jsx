@@ -35,7 +35,7 @@ export default function Contact() {
       setError(true);
     } else {
       axios
-        .post("https://wit-backend.onrender.com/query/addQuery", userDetails)
+        .post("https://witbackend.vercel.app/query/addQuery", userDetails)
         .then((data) => {
           console.log(data);
           if (data.status == 200) {

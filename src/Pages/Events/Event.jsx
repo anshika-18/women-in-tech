@@ -33,7 +33,7 @@ export default function Event() {
     console.log(event);
     axios
       //.get("https://wit-backend.cyclic.app/event/getEvent/" + event)
-      .get("https://wit-backend.onrender.com/event/getEvent/" + event)
+      .get("https://witbackend.vercel.app/event/getEvent/" + event)
       .then((data) => {
         if (data.data.length >= 1) {
           console.log(data.data);

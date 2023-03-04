@@ -33,7 +33,6 @@ import Logo1 from "./Images/logo_transparent_bg_white.png";
 
 import NavbarFun from "./Components/Navbar";
 import axios from "axios";
-
 function App() {
   const loadTeamData = () => {
     console.log("hello");

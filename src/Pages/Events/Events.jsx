@@ -19,7 +19,7 @@ export default function Events() {
       behavior: "smooth",
     });
     axios
-      .get("https://wit-backend.onrender.com/event/getEvents")
+      .get("https://witbackend.vercel.app/event/getEvents")
       //.get("https://wit-backend.cyclic.app/event/getEvents")
 
       //.get("http://localhost:5001/event/getEvents")

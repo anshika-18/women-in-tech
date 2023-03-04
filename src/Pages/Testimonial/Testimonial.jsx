@@ -14,7 +14,7 @@ export default function Testimonial() {
     });
 
     axios
-      .get("https://wit-backend.onrender.com/testimonials/getFeedback")
+      .get("https://witbackend.vercel.app/testimonials/getFeedback")
       .then((data) => {
         console.log(data.data);
         setData(data.data);
