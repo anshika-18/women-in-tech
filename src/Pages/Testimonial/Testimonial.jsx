@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import "./Testimonial.scss";
 import axios from "axios";
 import { Audio, ThreeDots } from "react-loader-spinner";
+import user from "../../Images/user.png";
 
 export default function Testimonial() {
   const [data, setData] = useState([]);
@@ -34,22 +35,16 @@ export default function Testimonial() {
               return (
                 <div class="testimonials-card">
                   <div class="user-image">
-                    <img
-                      src="https://i.ibb.co/cTxbjBM/1635226713991.jpg"
-                      alt="1635226713991"
-                      border="0"
-                    />
+                    {!curr.image ? (
+                      <img src={user} alt="1635226713991" border="0" />
+                    ) : (
+                      <img src={curr.image} alt="1635226713991" border="0" />
+                    )}
                   </div>
                   <div class="testimonial-content">
-                    <p>
-                      I loved the interaction classes provides and overview of
-                      the particular that to be done in the class with that the
-                      sessions and support through the community to participants
-                      is commendable. It actually gives me insight of what
-                      should and how should I do further.
-                    </p>
+                    <p>{curr.feedback}</p>
                     <div class="user-name">
-                      <b>~ Anonymous</b>
+                      <b>~ {curr.name}</b>
                     </div>
                   </div>
                 </div>

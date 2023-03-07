@@ -9,7 +9,7 @@ import moment from "moment";
 
 export default function Events() {
   const id = "1";
-  const [data, setData] = useState([]);
+  //const [data, setData] = useState([]);
   const [active, setActive] = useState([]);
   const [archive, setArchive] = useState([]);
 
@@ -25,7 +25,7 @@ export default function Events() {
       //.get("http://localhost:5001/event/getEvents")
       .then((data) => {
         console.log(data.data);
-        setData(data.data.active);
+        //setData(data.data.active);
         setActive(data.data.active);
         setArchive(data.data.archive);
       })
@@ -53,12 +53,13 @@ export default function Events() {
           </li>
         </ul>
       </div>
-      {active.length != 0 ? (
+      {active.length != 0 || archive.length != 0 ? (
         <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
           <div className="events-main">
             <div id="active">
               <div className="active">Active Events</div>
               <div className="type">
+                {active.length == 0 ? <>NO ACTIVE EVENTS</> : <></>}
                 {active.map((curr) => {
                   return (
                     <div className="event-card">
@@ -122,6 +123,7 @@ export default function Events() {
             <div id="archive">
               <div className="active">Archive Events</div>
               <div className="type">
+                {archive.length == 0 ? <>NO ACTIVE EVENTS</> : <></>}
                 {archive.map((curr) => {
                   return (
                     <div className="event-card">
