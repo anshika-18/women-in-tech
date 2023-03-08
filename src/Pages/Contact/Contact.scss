@@ -21,7 +21,9 @@
   background: radial-gradient(circle, rgba(255, 255, 255, 1), $background);
   background: #f2f3f4;
   align-self: center;
-  height: 90vh;
+  // height: 90vh;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .contact-input {

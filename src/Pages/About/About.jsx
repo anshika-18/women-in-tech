@@ -16,10 +16,11 @@ export default function About() {
       <div className="about-main">
         <div className="about-main-1">
           <p>
-            WIT++:Women in Technology is a non profit community to inspire young
-            women to learn DSA and coding skills in a collaborative environment.
-            It encourages women not only from CS, IT but from all other branches
-            to achieve their career goals in the software industry
+            WIT++: Women in Technology is a non profit community to inspire
+            young women to learn DSA and coding skills in a collaborative
+            environment. It encourages women not only from CS, IT but from all
+            other branches to achieve their career goals in the software
+            industry
           </p>
           <div className="home-head about-head">What does WIT++ do? </div>
           <ul>
