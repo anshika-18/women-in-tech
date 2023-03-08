@@ -66,7 +66,7 @@ export default function Events() {
                       <div className="event-img">
                         <img
                           src={curr.posterUrl}
-                          alt="sarthak-sir-session"
+                          alt="session poster"
                           border="0"
                         />
                       </div>
@@ -105,12 +105,16 @@ export default function Events() {
                               <Link to={"/events/" + curr.topic}>
                                 <Button>Learn More</Button>
                               </Link>
-                              <a
-                                target="_blank"
-                                class="btn btn-primary"
-                                href="https://docs.google.com/forms/d/1D-SaYu-1rWGx8OD7sB6ow5KjhR_6L0YrN9vN9cenjPs/edit?ts=61eebcb2#response=ACYDBNgH0HnV8RWttMjLcX5X2w4LmqXvuLfXTzvv-xv-i940MS6Y7HfurM9kYNWHpw">
-                                Register
-                              </a>
+                              {curr.registerUrl != "" ? (
+                                <a
+                                  target="_blank"
+                                  class="btn btn-primary"
+                                  href={curr.registerUrl}>
+                                  Register
+                                </a>
+                              ) : (
+                                <></>
+                              )}
                             </>
                           )}
                         </div>
@@ -123,7 +127,7 @@ export default function Events() {
             <div id="archive">
               <div className="active">Archive Events</div>
               <div className="type">
-                {archive.length == 0 ? <>NO ACTIVE EVENTS</> : <></>}
+                {archive.length == 0 ? <>NO ARCHIEVED EVENTS</> : <></>}
                 {archive.map((curr) => {
                   return (
                     <div className="event-card">
@@ -169,6 +173,7 @@ export default function Events() {
                               <Link to={"/events/" + curr.topic}>
                                 <Button>Learn More</Button>
                               </Link>
+
                               <a
                                 target="_blank"
                                 class="btn btn-primary"

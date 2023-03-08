@@ -106,7 +106,12 @@ export default function Event() {
                   areas. Kindly fill the google form to confirm your presence
                   and receive the link.
                 </div>
-                <div className="event-speaker">Speaker : {data.speaker}</div>
+                {data.speaker == "" ? (
+                  <></>
+                ) : (
+                  <div className="event-speaker">Speaker : {data.speaker}</div>
+                )}
+
                 {moment().diff(moment(data.date), "seconds") > 0 ? (
                   <>
                     <Button className="mt-2 w-100" variant="secondary" disabled>
@@ -115,9 +120,13 @@ export default function Event() {
                   </>
                 ) : (
                   <>
-                    <a target="_blank" href={data.registerUrl}>
-                      <Button className="mt-2 w-100">Register</Button>
-                    </a>
+                    {data.registerUrl == "" ? (
+                      <></>
+                    ) : (
+                      <a target="_blank" href={data.registerUrl}>
+                        <Button className="mt-2 w-100">Register</Button>
+                      </a>
+                    )}
                   </>
                 )}
               </div>
