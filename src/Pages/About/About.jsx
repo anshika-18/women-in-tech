@@ -23,12 +23,14 @@ export default function About() {
           </p>
           <div className="home-head about-head">What does WIT++ do? </div>
           <ul>
-            <li>Conduct regular DSA session </li>
-            <li>Conduct workshops for web development, app development </li>
+            <li>Conduct regular DSA session. </li>
+            <li>
+              Conduct workshops for web development, app development etc.{" "}
+            </li>
             <li>Conduct contest and mock interviews.</li>
-            <li> Provide some tips and tricks to crack interview</li>
+            <li> Provide some tips and tricks to crack interview.</li>
             <li>Resolve your doubts and shape your ideas.</li>
-            <li> Improve logical and analytical skills</li>
+            <li> Improve logical and analytical skills.</li>
           </ul>
         </div>
         <div>
