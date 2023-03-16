@@ -275,10 +275,25 @@ hr {
       .member {
         margin: 10px;
         width: 100%;
+        display:flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        .member-img {
+            img {
+              width: 135px;
+              height: 135px;
+              border-radius: 50%;
+            }
+          }
         .member-detail {
           padding: 10px;
+          .member-name {
+              font-weight: 700;
+              font-size: 17px;
+            }
           .member-pos {
-            font-size: 15px;
+            font-size: 14px;
           }
         }
       }
