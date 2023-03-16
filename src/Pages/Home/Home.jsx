@@ -115,7 +115,7 @@ export default function Home() {
             <div className="member-detail">
               <div className="member-name">Sejal Gupta</div>
               <div className="member-pos">
-                Analyst at Goldmam Sachs | Researcher | MLSA | Public speaker
+                Analyst at Goldman Sachs | Researcher | MLSA | Public speaker
               </div>
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function Home() {
             </div>
             <div className="member-detail">
               <div className="member-name">Anisha Jindal</div>
-              <div className="member-pos">Analyst at Goldmam Sachs </div>
+              <div className="member-pos">Analyst at Goldman Sachs </div>
             </div>
           </div>
         </div>
